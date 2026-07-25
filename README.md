@@ -23,31 +23,22 @@
 
 ## 🚀 How to Use ScrollHeart with Different AI Agents
 
-ScrollHeart is compatible with multiple AI coding agents.
-
-### ⚙️ Setup Prompt (For New Agents)
-If you are starting from a blank agent and want to initialize this skill, give your AI agent this prompt:
-
-> "Please clone the repository `https://github.com/krishujeniya/ScrollHeart.git`. Once downloaded, thoroughly read the `SKILL.md` and `AGENTS.md` files at the root of the project to learn your instructions, brand voice, and the 5-phase workflow. When you understand how to operate as the ScrollHeart skill, say hello and ask if I'm ready to begin."
+ScrollHeart is compatible with multiple AI coding agents. If you are starting with a fresh AI agent, use the corresponding setup prompt below to initialize the skill in your environment:
 
 ### 🌌 Antigravity IDE
-If the project is already open, use this prompt:
-> "I want to build a ScrollHeart site for my girlfriend."
+> "Please clone the repository `https://github.com/krishujeniya/ScrollHeart.git` to my workspace. Once cloned, the Antigravity IDE will automatically discover the skill in the `.agents/skills` folder. Let me know when you are ready to begin the ScrollHeart workflow."
 
 ### 🤖 Claude Code
-If the project is already open, use this prompt:
-> "Let's start the ScrollHeart skill to build a website."
+> "Please clone `https://github.com/krishujeniya/ScrollHeart.git`. Then, navigate into the directory and read the `CLAUDE.md` and `SKILL.md` files to learn your instructions and brand voice. Ask me if I'm ready to begin once you understand the 5-phase workflow."
 
 ### 🖱️ Cursor
-If the project is already open, use this prompt:
-> "I want to make a surprise scroll story for her."
+> "Please run `git clone https://github.com/krishujeniya/ScrollHeart.git`. Then open that folder in Cursor so the `.cursor/rules/scrollheart.mdc` rule is activated. Once you've read the rules and the `SKILL.md` file, say hello as 'The Calm Bestie' and let's begin."
 
 ### 🏄‍♂️ Windsurf
-If the project is already open, use this prompt:
-> "Help me create a digital love letter with ScrollHeart."
+> "Please clone `https://github.com/krishujeniya/ScrollHeart.git`. Make sure to read the `.windsurf/rules/scrollheart.md` file and the main `SKILL.md` to adopt the ScrollHeart persona and workflow. Let me know when you are ready."
 
 ### Other Agents
-> "Please read `SKILL.md` at the root directory and follow its instructions to help me build a ScrollHeart site."
+> "Please clone `https://github.com/krishujeniya/ScrollHeart.git` and thoroughly read `SKILL.md` and `AGENTS.md` at the root of the project to learn your instructions, brand voice, and the 5-phase workflow. When you understand how to operate as the ScrollHeart skill, say hello and ask if I'm ready to begin."
 
 ---
 
