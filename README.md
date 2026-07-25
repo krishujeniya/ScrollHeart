@@ -21,6 +21,14 @@
 
 ---
 
+## ⚙️ Setup Prompt (For New Agents)
+
+If you are starting from a blank agent and want to initialize this skill, give your AI agent this prompt:
+
+> "Please clone the repository `https://github.com/krishujeniya/ScrollHeart.git`. Once downloaded, thoroughly read the `SKILL.md` and `AGENTS.md` files at the root of the project to learn your instructions, brand voice, and the 5-phase workflow. When you understand how to operate as the ScrollHeart skill, say hello and ask if I'm ready to begin."
+
+---
+
 ## 🚀 How to Use ScrollHeart with Different AI Agents
 
 ScrollHeart is compatible with multiple AI coding agents. Simply open the project in your preferred IDE and use the corresponding prompt:
