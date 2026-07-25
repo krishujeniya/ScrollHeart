@@ -33,8 +33,18 @@
   const audioIcon = audioToggle.querySelector('.audio-icon');
   const progressFill = document.getElementById('progress-fill');
   const replayBtn = document.getElementById('replay-btn');
+  const audioToast = document.getElementById('audio-toast');
 
   let isPlaying = false;
+
+  function showAudioToast() {
+    if (audioToast) {
+      audioToast.classList.remove('hidden');
+      setTimeout(function () {
+        audioToast.classList.add('hidden');
+      }, 5000);
+    }
+  }
 
   // ============================================
   // 4. Overlay & Audio Controller
@@ -55,6 +65,7 @@
         // Audio failed — degrade gracefully
         isPlaying = false;
         audioIcon.textContent = '🔇';
+        showAudioToast();
       });
 
     // Refresh ScrollTrigger after overlay hides
@@ -77,6 +88,7 @@
         })
         .catch(function () {
           audioIcon.textContent = '🔇';
+          showAudioToast();
         });
     }
   });
@@ -175,9 +187,25 @@
   }
 
   // ============================================
-  // 9. Text Entrance Animations
+  // 9. Text Entrance Animations & Accessibility
   // ============================================
   function initTextAnimations() {
+    // Accessibility: Dynamically toggle aria-hidden based on scroll position
+    // so screen readers pace the story exactly like sighted users.
+    var allTextElements = document.querySelectorAll('.scene-text, .climax-card, .signature');
+    allTextElements.forEach(function (el) {
+      el.setAttribute('aria-hidden', 'true');
+      ScrollTrigger.create({
+        trigger: el,
+        start: 'top 90%',
+        end: 'bottom 10%',
+        onEnter: function () { el.removeAttribute('aria-hidden'); },
+        onLeave: function () { el.setAttribute('aria-hidden', 'true'); },
+        onEnterBack: function () { el.removeAttribute('aria-hidden'); },
+        onLeaveBack: function () { el.setAttribute('aria-hidden', 'true'); },
+      });
+    });
+
     // Scene 1 — fade up (gentle intro)
     var scene1Text = document.querySelector('#scene-1 .scene-text');
     if (scene1Text) {

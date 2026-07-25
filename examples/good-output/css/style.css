@@ -171,8 +171,31 @@ body {
 }
 
 /* ============================================
-   5. AUDIO CONTROLS
+   5. AUDIO CONTROLS & TOAST
    ============================================ */
+.audio-toast {
+  position: fixed;
+  bottom: 80px;
+  right: var(--space-md);
+  z-index: 51;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--color-text);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-family: var(--font-body);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: opacity var(--duration-medium) var(--ease-smooth),
+              transform var(--duration-medium) var(--ease-smooth);
+  transform: translateY(0);
+}
+
+.audio-toast.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+
 .audio-controls {
   position: fixed;
   bottom: var(--space-md);
@@ -217,15 +240,16 @@ body {
 .scene {
   position: relative;
   width: 100%;
+  min-height: 100vh;
   min-height: 100svh;
   overflow: hidden;
 }
 
-#scene-1 { height: var(--scene-height-intro); }
-#scene-2 { height: var(--scene-height-verse); }
-#scene-3 { height: var(--scene-height-chorus); }
-#scene-4 { height: var(--scene-height-bridge); }
-#scene-5 { height: var(--scene-height-outro); }
+#scene-1 { height: 300vh; height: var(--scene-height-intro); }
+#scene-2 { height: 200vh; height: var(--scene-height-verse); }
+#scene-3 { height: 250vh; height: var(--scene-height-chorus); }
+#scene-4 { height: 150vh; height: var(--scene-height-bridge); }
+#scene-5 { height: 100vh; height: var(--scene-height-outro); }
 
 .bg-layer,
 .mid-layer,
@@ -253,6 +277,7 @@ body {
   z-index: 4;
   position: sticky;
   top: 0;
+  height: 100vh;
   height: 100svh;
 }
 
@@ -638,6 +663,7 @@ body {
 
   .scene {
     height: auto !important;
+    min-height: 100vh;
     min-height: 100svh;
   }
 

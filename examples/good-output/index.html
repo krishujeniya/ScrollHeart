@@ -14,6 +14,13 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
+  <noscript>
+    <style>
+      .scene-text, .signature, .replay-button { opacity: 1 !important; transform: none !important; }
+      .audio-controls { display: none !important; }
+      .overlay { display: none !important; }
+    </style>
+  </noscript>
 </head>
 <body>
   <!-- Audio Consent Overlay -->
@@ -26,6 +33,11 @@
       </button>
       <p class="overlay-hint">🔊 Best with sound on</p>
     </div>
+  </div>
+
+  <!-- Audio Toast Notification -->
+  <div id="audio-toast" class="audio-toast hidden" aria-live="polite">
+    Audio blocked by browser — tap the 🔇 icon to try again.
   </div>
 
   <!-- Audio Element -->

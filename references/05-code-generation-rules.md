@@ -22,6 +22,15 @@ scrollheart-story/
 └── .nojekyll           # Bypass Jekyll on GitHub Pages
 ```
 
+### AI Generation Workflow (CRITICAL)
+- **Do not generate all files at once.** The CSS and JS files are large and will likely hit your output token limit if generated together.
+- Generate `index.html` first. Ask the user for confirmation.
+- Generate `css/style.css` next. Ask the user for confirmation.
+- Generate `js/main.js` last.
+
+### Asset Bloat Prevention
+- If the user provides an audio file (`music.mp3`), explicitly instruct them to compress it to under **1MB** (e.g., 128kbps or lower) before adding it to the `assets/` folder. Large audio files will destroy mobile performance and scrolling smoothness.
+
 ---
 
 ## HTML Structure (`index.html`)
@@ -69,6 +78,11 @@ scrollheart-story/
       </button>
       <p class="overlay-hint">🔊 Best with sound on</p>
     </div>
+  </div>
+
+  <!-- Audio Toast Notification -->
+  <div id="audio-toast" class="audio-toast hidden" aria-live="polite">
+    Audio blocked by browser — tap the 🔇 icon to try again.
   </div>
 
   <!-- Audio Element -->

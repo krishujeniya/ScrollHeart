@@ -133,18 +133,9 @@ Tell the user:
 > "If you have GitHub Pro, set the repository to Private. If you're on the free plan, the public repo is fine — the name is obscure enough that no one will find it."
 
 **Password protection (optional):**
-> "Want to add a password? I can add a simple password prompt that asks for a word only she would know — like an inside joke or a pet name."
+> "If you want true privacy, GitHub Pages doesn't support password protection on free accounts. Instead, I can help you deploy this to **Netlify** or **Vercel** where we can set up secure edge-function password protection so only she can access it."
 
-If the user wants this, implement a simple JS password gate:
-```javascript
-// Simple password prompt (not cryptographically secure, but sufficient)
-const password = prompt('Enter the secret word:');
-if (password !== '{user_chosen_password}') {
-  document.body.innerHTML = '<p style="text-align:center;padding:2rem;">Wrong password.</p>';
-}
-```
-
-**Note:** This is NOT secure encryption. It's a casual deterrent. For real security, suggest Netlify with password protection.
+If the user wants this, DO NOT provide a Javascript `prompt()` based password — this is insecure and easily bypassed by disabling JS or viewing the source code. Instead, guide them to create a free Netlify account and deploy the folder there, utilizing Netlify's access control features or edge functions for actual security.
 
 ---
 
