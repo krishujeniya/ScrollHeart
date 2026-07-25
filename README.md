@@ -23,33 +23,22 @@
 
 ## 🚀 How to Use ScrollHeart with Different AI Agents
 
-ScrollHeart is compatible with multiple AI coding agents. Follow the instructions for your IDE to get started.
+ScrollHeart is compatible with multiple AI coding agents. Simply open the project in your preferred IDE and use the corresponding prompt:
 
 ### 🌌 Antigravity IDE
-Antigravity automatically discovers skills in the `.agents/skills` directory.
-1. Open this project in Antigravity.
-2. In the chat, simply mention building a romantic website (e.g., "I want to build a ScrollHeart site for my girlfriend").
-3. The skill will trigger and begin the 5-phase workflow automatically.
+> "I want to build a ScrollHeart site for my girlfriend."
 
 ### 🤖 Claude Code
-1. Start Claude Code in the project root.
-2. The `CLAUDE.md` file will direct Claude to read the `SKILL.md` entry point.
-3. Prompt: "Let's start the ScrollHeart skill to build a website."
+> "Let's start the ScrollHeart skill to build a website."
 
 ### 🖱️ Cursor
-Cursor uses the `.cursor/rules/scrollheart.mdc` rule file.
-1. Open the workspace in Cursor.
-2. Open the Composer or Chat.
-3. Type: "I want to make a surprise scroll story for her."
-4. Cursor will apply the rule and follow the workflow.
+> "I want to make a surprise scroll story for her."
 
 ### 🏄‍♂️ Windsurf
-1. Open the workspace in Windsurf.
-2. The `.windsurf/rules/scrollheart.md` file defines the triggers.
-3. Ask the AI: "Help me create a digital love letter with ScrollHeart."
+> "Help me create a digital love letter with ScrollHeart."
 
-### Other Agents (Codex, etc.)
-Any agent that supports `llms.txt` can understand this skill. Just point it to the root directory and ask it to follow the `SKILL.md` instructions.
+### Other Agents
+> "Please read `SKILL.md` at the root directory and follow its instructions to help me build a ScrollHeart site."
 
 ---
 
